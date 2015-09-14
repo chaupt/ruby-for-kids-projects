@@ -1,16 +1,15 @@
 require 'gosu'
 
 class Tile
-  attr_reader :row, :column, :number, :type
-
   PLAYER_TYPE   = 'P'
   START_TYPE    = 'S'
   EXIT_TYPE     = 'E'
   TREASURE_TYPE = 'T'
   EMPTY_TYPE    = '.'
-
   WIDTH = 32
   HEIGHT = 32
+
+  attr_reader :row, :column, :type
 
   def initialize(window, column, row, type)
     @@colors ||= {red: Gosu::Color.argb(0xaaff0000),

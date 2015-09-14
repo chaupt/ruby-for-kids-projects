@@ -1,11 +1,19 @@
+#
+# Ruby for Kids Project 10: Amazing
+# Programmed By: Chris Haupt
+# A maze-like treasure search game
+#
+# To run the program, use:
+# ruby amazing.rb
+#
 require 'gosu'
 require_relative 'game'
 
-class Amazed < Gosu::Window
+class Amazing < Gosu::Window
 
   def initialize
     super(640, 640)
-    self.caption = "Amazed"
+    self.caption = "Amazing"
     @game = Game.new(self)
   end
 
@@ -22,5 +30,5 @@ class Amazed < Gosu::Window
   end
 end
 
-window = Amazed.new
+window = Amazing.new
 window.show

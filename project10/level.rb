@@ -4,8 +4,6 @@ require_relative 'player'
 
 class Level
 
-  attr_reader :total_columns, :total_rows
-
   def initialize(window, player, level_data)
     @window     = window
     @tiles      = []
@@ -19,8 +17,8 @@ class Level
       if @total_rows > 0
         @total_columns = @level_data.first.length
       end
+      setup_level
     end
-    setup_level
   end
 
   def setup_level
