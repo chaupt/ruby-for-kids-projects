@@ -8,6 +8,21 @@ class Player
     @bet  = nil
   end
 
+  def discard_hand
+      @bet = nil
+      @hand = []
+  end
+
+  def take_card(card)
+    @hand << card
+  end
+
+  def sort_hand_by_rank
+      @hand.sort! do |card1, card2|
+          Card.compare_rank(card1, card2)
+      end
+  end
+  
   def eliminated?
       @chips <= 0
   end
@@ -25,21 +40,6 @@ class Player
 
   def win(amount)
       @chips += amount
-  end
-
-  def discard_hand
-      @bet = nil
-      @hand = []
-  end
-
-  def take_card(card)
-    @hand << card
-  end
-
-  def sort_hand_by_rank
-      @hand.sort! do |card1, card2|
-          Card.compare_rank(card1, card2)
-      end
   end
 
 end

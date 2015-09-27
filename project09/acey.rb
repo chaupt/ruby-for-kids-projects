@@ -1,7 +1,7 @@
 #
 # Ruby for Kids Project 9: Acey Deucy
 # Programmed By: Chris Haupt
-# A multi player card game where you try to guess whether the next 
+# A multi player card game where you try to guess whether the next
 # card will be between two other cards, placing bets on the results
 #
 
@@ -14,11 +14,11 @@ STARTING_NUMBER_OF_CHIPS = 10
 MINIMUM_PLAYERS          = 2
 
 puts "Welcome to Acey Deucy"
-puts "Enter number of players"
+print "Enter number of players: "
 player_count = gets
 player_count = player_count.to_i
 
-if player_count >= MINIMUM_PLAYERS 
+if player_count >= MINIMUM_PLAYERS
   # Load up some players
   players = []
 
@@ -43,4 +43,3 @@ else
   puts "There should be at least #{MINIMUM_PLAYERS}"
 
 end
-

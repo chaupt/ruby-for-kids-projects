@@ -19,34 +19,25 @@ class Game
     def play
         while deck.size > (players.length * 3) && remaining_players > 1 do
             new_round
-            puts "--------------------------------------------"
+            puts "-" * 40
             puts "Round #{round}! The dealer has #{bank} chips."
-            puts "--------------------------------------------"
+            puts "-" * 40
             puts "Everyone antes"
             ante
             puts "The dealer now has #{bank} chips."
             deal_cards(2)
             sort_cards
-            puts "---> Current cards:"
-            puts ""
+            puts "---> Current cards:\n"
             show_cards
-            puts "---> Players bet:"
-            puts ""
+            puts "---> Players bet:\n"
             players_bet
-            puts ""
-            puts "---> Dealer deals one more card"
-            puts ""
+            puts "\n---> Dealer deals one more card\n"
             deal_cards(1)
             show_cards
-            puts ""
-            puts "---> Determining results"
-            puts ""
+            puts "---> Determining results\n"
             determine_results
-            puts ""
-            puts "---> New standings"
-            puts ""
+            puts "\n---> New standings\n"
             show_player_chips
-            puts ""
             puts ""
         end
         game_over
@@ -99,6 +90,10 @@ class Game
         end
     end
 
+    def max_bet(player)
+        [player.chips, bank].min
+    end
+
     def show_player_chips
         players.each do |player|
             if player.eliminated?
@@ -111,9 +106,9 @@ class Game
 
     def show_cards
         players.each do |player|
-            puts "#{player.name}"
+            puts "Player #{player.name}"
             if player.eliminated?
-                puts "#{player.name} has been eliminated"
+                puts "Has been eliminated!"
             else
                 player.hand.each do |card|
                     puts card.to_s
@@ -121,10 +116,6 @@ class Game
             end
             puts ""
         end
-    end
-
-    def max_bet(player)
-        [player.chips, bank].min
     end
 
     def determine_results
@@ -167,3 +158,6 @@ end
 
 # Check to see if player has enough chips to play that round, she needs at
             # least ANTE + 1, why?
+# Write the loops that use next a different way that doesn't require next
+# Change the rules so the player's only ante up once at the start of the game
+# and again only when the bank is empty. Does that change the outcome of the game?

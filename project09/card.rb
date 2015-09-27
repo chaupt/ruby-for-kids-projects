@@ -13,7 +13,8 @@ class Card
     "#{rank} of #{suit}"
   end
 
-  # returns 0 if same, -1 if card1 is smaller, and 1 if card1 is larger
+  # returns  -1 if card1 is less than, 0 if same as,
+  # and 1 if larger than card2
   def self.compare_rank(card1, card2)
     RANKS.index(card1.rank) <=> RANKS.index(card2.rank)
   end
@@ -28,4 +29,3 @@ class Card
     cards
   end
 end
-
