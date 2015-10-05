@@ -21,6 +21,10 @@ class Tower < Gosu::Window
     true
   end
 
+  def update
+    @game.update
+  end
+
   def button_down(id)
     @game.button_down(id)
   end

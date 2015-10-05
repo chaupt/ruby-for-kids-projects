@@ -1,6 +1,7 @@
 require 'gosu'
 require_relative 'disc'
 require_relative 'post'
+require_relative 'ai'
 
 class Game
 
@@ -21,6 +22,7 @@ class Game
     initialize_discs
     @current_disc = nil
     @move_count= 0
+    @player = AI.new
   end
 
   def initialize_posts
@@ -54,6 +56,10 @@ class Game
     end
   end
 
+  def increment_clicks
+    @move_count += 1
+  end
+
   def button_down(id)
     if id == Gosu::MsLeft
       # if a disc is selected, first see if a new post is clicked
@@ -75,6 +81,15 @@ class Game
     end
   end
 
+  def update
+    if @fiber.nil?
+      @fiber = Fiber.new do
+        AI.new.move(self, NUM_DISCS, @posts[0], @posts[2], @posts[1])
+      end
+    else
+      @fiber.resume rescue nil
+    end
+  end
 
   def draw
     @posts.each {|post| post.draw}
