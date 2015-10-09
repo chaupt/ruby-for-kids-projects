@@ -82,7 +82,6 @@ class Game
       neighbors = @grid.surrounding_cells(x, y)
       score = 0
       neighbors.each {|n| score += n.life_points}
-    #  score = neighbors.inject {|sum, n| sum + n.life_points}
       (cell.alive? && score >= 2 && score <= 3) || (score == 3)
   end
 
