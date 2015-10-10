@@ -6,7 +6,7 @@ class Disc
   BASE_DISC_SIZE    = 40
   DISC_VERTICAL_GAP = 10
 
-  attr_reader :width, :height, :color, :selected_color, :number, :selected, :x, :y
+  attr_reader   :number
   attr_accessor :post
 
   def initialize(window, number, starting_post)
@@ -23,37 +23,37 @@ class Disc
     starting_post.add_disc(self)
   end
 
+  def top_most?
+      @post.last == self
+  end
+
   def toggle_selected
     @selected = !@selected
   end
 
-  def top_most?
-      post.last == self
-  end
-
   def contains?(mouse_x, mouse_y)
-    mouse_x >= x && mouse_x <= x + width &&
-      mouse_y >= y && mouse_y <= y + height
+    mouse_x >= @x && mouse_x <= @x + @width &&
+      mouse_y >= @y && mouse_y <= @y + @height
   end
 
   # Asked post for correct drawing info
   def draw
-    if post
-      @x = post.center - width / 2
-      position = post.find_disc_position(self)
+    if @post
+      @x = @post.center - @width / 2
+      position = @post.find_disc_position(self)
       if position
-        if selected
-          c = selected_color
+        if @selected
+          c = @selected_color
         else
-          c = color
+          c = @color
         end
         # calculate the y position based on height of post
-        @y = post.base - height - (position * (height + DISC_VERTICAL_GAP))
+        @y = @post.base - @height - (position * (@height + DISC_VERTICAL_GAP))
         @window.draw_quad(
           @x, @y, c,
-          @x + width, @y, c,
-          @x + width, @y + height, c,
-          @x, @y + height, c)
+          @x + @width, @y, c,
+          @x + @width, @y + @height, c,
+          @x, @y + @height, c)
       end
     end
   end

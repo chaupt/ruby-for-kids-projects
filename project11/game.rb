@@ -20,7 +20,7 @@ class Game
     initialize_posts
     initialize_discs
     @current_disc = nil
-    @click_count= 0
+    @move_count= 0
   end
 
   def initialize_posts
@@ -64,7 +64,7 @@ class Game
         if hit_post && hit_post.valid_move?(@current_disc)
           hit_post.move_disc(@current_disc)
           select_disc(nil)
-          @click_count += 1
+          @move_count += 1
           return
         end
       end
@@ -80,7 +80,7 @@ class Game
     @posts.each {|post| post.draw}
     @discs.each {|disc| disc.draw}
     @font.draw("Move tower from left to right most post!", 4, 2, 10)
-    @font.draw("Moves: #{@click_count}", 640, 2, 10)
+    @font.draw("Moves: #{@move_count}", 640, 2, 10)
   end
 
 end
