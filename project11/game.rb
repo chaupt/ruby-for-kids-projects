@@ -22,7 +22,6 @@ class Game
     initialize_discs
     @current_disc = nil
     @move_count= 0
-    @player = AI.new
   end
 
   def initialize_posts
