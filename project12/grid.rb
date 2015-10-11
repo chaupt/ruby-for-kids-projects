@@ -31,7 +31,6 @@ class Grid
         board[rand(@total_rows)][rand(@total_columns)].live!
       end
     else
-      # puts seeds.inspect
       seeds.each do |x,y|
         cell(x,y).live!
       end
@@ -62,19 +61,6 @@ class Grid
     end
   end
 
-  def surrounding_cells(x, y)
-    cells = []
-    (y - 1).upto(y + 1) do |row|
-      (x - 1).upto(x + 1) do |column|
-        next if row < 0 || row >= @total_rows
-        next if column < 0 || column >= @total_columns
-        next if x == column && y == row
-        cells << cell(column,row)
-      end
-    end
-    cells.compact
-  end
-
   def lifeless?
     none? do |cell|
       cell.alive?
@@ -89,14 +75,27 @@ class Grid
     living_cells
   end
 
+  def surrounding_cells(x, y)
+    cells = []
+    (y - 1).upto(y + 1) do |row|
+      (x - 1).upto(x + 1) do |column|
+        next if row < 0 || row >= @total_rows
+        next if column < 0 || column >= @total_columns
+        next if x == column && y == row
+        cells << cell(column,row)
+      end
+    end
+    cells.compact
+  end
+
   def ==(other)
     self.life == other.life
   end
 
   def draw
-    each do |c|
-      if c
-        c.draw
+    each do |grid_cell|
+      if grid_cell
+        grid_cell.draw
       end
     end
   end
