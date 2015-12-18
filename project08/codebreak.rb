@@ -1,8 +1,7 @@
 #
-# Ruby for Kids Project 8: Code Breaker
+# Ruby For Kids Project 8: Code Breaker
 # Programmed By: Chris Haupt
-# A program that will encrypt and decrypt another document using
-# the Caesar Cipher
+# A program that will encrypt and decrypt another document using the Caesar cipher
 #
 
 class Caesar

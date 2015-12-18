@@ -1,5 +1,5 @@
 #
-# Ruby for Kids Project 10: Amazing
+# Ruby For Kids Project 10: A-maze-ing
 # Programmed By: Chris Haupt
 # A maze-like treasure search game
 #

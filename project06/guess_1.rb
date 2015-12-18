@@ -7,8 +7,8 @@
 puts "Welcome to the Guessing Game"
 puts "We will play #{Game::TOTAL_ROUNDS} rounds. Try to guess the number"
 puts "I'm thinking of in the fewest guesses."
-puts "You will also estimate how many guesses it will take"
-puts "and if you do it in less, gain bonus points!"
+puts "You'll also estimate how many guesses it will take."
+puts "If you do it in fewer guesses, you'll gain bonus points!"
 puts ""
 print "What is your name? "
 name   = gets.chomp

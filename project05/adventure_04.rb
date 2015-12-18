@@ -39,7 +39,7 @@ escaped                   = false
 monster                   = false
 current_room              = create_room
 
-puts "You are trapped in the dungeon, collect treasure and try to escape"
+puts "You are trapped in the dungeon. Collect treasure and try to escape"
 puts "before an evil monster gets you!"
 puts "To play, type one of the command choices on each turn."
 puts ""

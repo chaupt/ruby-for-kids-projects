@@ -1,5 +1,5 @@
 #
-# Ruby for Kids Project 4
+# Ruby For Kids Project 4
 # Programmed By: Chris Haupt
 # Experiment with drawing ASCII art shapes using code.
 #

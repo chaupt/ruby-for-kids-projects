@@ -1,7 +1,7 @@
 #
-# Ruby for Kids Project 7: Straws
+# Ruby For Kids Project 7: Straws
 # Programmed By: Chris Haupt
-# Elimination round tournament style, avoid the shortest straw or else!
+# Elimination round tournament style, avoid the shortest straw, or else!
 #
 
 class Straw
@@ -117,14 +117,14 @@ class Game
   def show_winner
     last_player = @players.first
     puts ""
-    puts "The Winner is #{last_player.name}"
+    puts "The winner is #{last_player.name}"
     puts ""
   end
 end
 
 puts "Welcome to the Last Straw Game"
 puts "In each round, players will draw straws of two different lengths."
-puts "The player(s) who pick the short straw are eliminated and"
+puts "The players who pick the short straw will be eliminated and"
 puts "a new round will begin."
 
 PLAYERS = %w(anne bert chris donna ernie franz garfield holden ivy jose)

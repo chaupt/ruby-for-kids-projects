@@ -1,7 +1,7 @@
 #
-# Ruby for Kids Project 9: Acey Deucy
+# Ruby For Kids Project 9: Acey Deucy
 # Programmed By: Chris Haupt
-# A multi player card game where you try to guess whether the next
+# A multiplayer card game where you try to guess whether the next
 # card will be between two other cards, placing bets on the results
 #
 

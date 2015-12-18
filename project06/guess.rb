@@ -1,5 +1,5 @@
 #
-# Ruby for Kids Project 6: Guessing Game
+# Ruby For Kids Project 6: Guessing Game
 # Programmed By: Chris Haupt
 # A guessing game with where the hints might not be true
 #
@@ -110,7 +110,7 @@ class Game
     print "I will pick a number between 1 and what larger number? "
     high_number = @player.get_high_number
     if high_number <= 1
-      puts "Oops! The number must be larger than 1, try again."
+      puts "Oops! The number must be larger than 1. Try again."
       return false
     else
       return true
@@ -179,8 +179,8 @@ end
 puts "Welcome to the Guessing Game"
 puts "We will play #{Game::TOTAL_ROUNDS} rounds. Try to guess the number"
 puts "I'm thinking of in the fewest guesses."
-puts "You will also estimate how many guesses it will take"
-puts "and if you do it in less, gain bonus points!"
+puts "You'll also estimate how many guesses it will take."
+puts "If you do it in fewer guesses, you'll gain bonus points!"
 puts ""
 print "What is your name? "
 name   = gets.chomp

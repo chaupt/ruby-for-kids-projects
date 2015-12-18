@@ -1,5 +1,5 @@
 #
-# Ruby for Kids Project 11: Tower
+# Ruby For Kids Project 11: Tower
 # Programmed By: Chris Haupt
 # Towers of Hanoi puzzle
 #
