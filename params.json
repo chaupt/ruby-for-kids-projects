@@ -1,6 +1,6 @@
 {
   "name": "Ruby For Kids For Dummies",
   "tagline": "Source code for projects from Christopher Haupt's book",
-  "body": "# Ruby For Kids For Dummies\r\n\r\n![Ruby For Kids Book](https://github.com/chaupt/ruby-for-kids-projects/blob/master/ruby-for-kids.jpg)\r\n\r\nThis repo contains the source code for Christopher Haupt's book, Ruby for Kids\r\nfor Dummies. Updates, suggestions, and bug reports welcome!\r\n\r\n[Ruby For Kids on Amazon](http://www.amazon.com/Ruby-Kids-Dummies-Christopher-Haupt/dp/1119055903)\r\n",
+  "body": "![Ruby For Kids Book](https://raw.githubusercontent.com/chaupt/ruby-for-kids-projects/master/ruby-for-kids.jpg)\r\n\r\nThis repo contains the source code for Christopher Haupt's book, Ruby for Kids\r\nfor Dummies. Updates, suggestions, and bug reports welcome!\r\n\r\n[Ruby For Kids on Amazon](http://www.amazon.com/Ruby-Kids-Dummies-Christopher-Haupt/dp/1119055903)\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
